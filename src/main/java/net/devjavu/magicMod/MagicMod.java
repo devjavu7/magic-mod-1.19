@@ -1,12 +1,13 @@
 package net.devjavu.magicMod;
 
+import net.devjavu.magicMod.block.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MagicMod implements ModInitializer {
-    public static final String MAGIC_MOD = "magic_mod";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MAGIC_MOD);
+    public static final String MOD_ID = "magic_mod";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     @Override
     public void onInitialize() {
@@ -15,5 +16,6 @@ public class MagicMod implements ModInitializer {
         // Proceed with mild caution.
 
         LOGGER.info("Hello Fabric world!");
+        ModBlocks.registerModBlocks();
     }
 }
